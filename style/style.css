@@ -1,4 +1,4 @@
-/* General */
+/* -----------------General----------------- */
 
 *{
     padding: 0;
@@ -15,7 +15,7 @@ body{
 
 [class|="button"]{
     padding: 8px 24px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
     position: relative;
     top: 85%;
@@ -28,6 +28,7 @@ body{
 
 [class|="button"]:hover{
     border: none;
+    text-decoration: none;
 }
 
 [class|="button"]::after{
@@ -47,6 +48,22 @@ body{
 [class|="button"]:hover::after{
     transform: scale(1);
 }
+
+video{
+    width: 100vw;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul li{
+    list-style: none;
+}
+
+/* --------------------------------------- */
 
 .header{
     display: flex;
@@ -130,6 +147,131 @@ body{
     z-index: 0;
 }
 
+.button-underground{
+    color: #000;
+}
+
+.button-underground::after{
+    background-color: #000;
+}
+
+[class|="product"]{
+    width: calc(100vw/3);
+    height: 80vh;
+}
+
+[class|="product"] img{
+    width: 60%;
+    height: 60%;
+    margin-top: 10%;
+}
+
+[class|="product"] a{
+    color: #000;
+    margin-top: 30px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+[class|="product"] a:hover{
+    text-decoration: underline;
+}
+
+.product-1, .product-3{
+    background-image: url("../media/title_background/product_background_2.jpeg");
+}
+
+.product-2{
+    background-image: url("../media/title_background/product_background.jpeg");
+}
+
+.button-purchase{
+    padding: 8px 100px;
+}
+
+.button-purchase:hover{
+    text-decoration: none!important;
+}
+
+.button-purchase::after{
+    background-color: #000;
+}
+
+.footer{
+    background-image: url("../media/background/footer.jpeg");
+    background-size: cover;
+    max-width: 100vw;
+    width: 100vw;
+    height: 65vh;
+}
+
+.footer>div{
+    display: inline;
+}
+
+.footer img{
+    position: relative;
+    margin-top: 5%;
+    margin-left: 4vw;
+}
+
+.footer ul{
+    margin-top: 5%;
+    text-align: right;
+    display: inline-flex;
+    max-width: 70vw;
+    width: 70vw;
+    float: right;
+    white-space: pre-line;
+}
+
+.footer ul li{
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.footer form{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-flex;
+    position: relative;
+    top: 40px;
+    left: -600px;
+}
+
+.footer form label{
+    width: 300px;
+    margin-top: 10px;
+}
+
+.footer form input{
+    width: 190px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #8a8a8a;
+    border-bottom-width: 1px;
+    padding: 10px 0;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #8a8a8a;
+    outline: none;
+}
+
+.footer form .submitButton{
+    background: url("../media/button/submit_arrow.png") no-repeat center center/42px auto;
+    margin: -40px 0 0 430px;
+    border: none;
+    width: 42px;
+    height: 28px;
+    display: block;
+    outline: none;
+}
+
+/* --------------------------------------- */
+
 #oneMoreLightLive{
     background-image: url("../media/title_background/one_more_light_live.png");
 }
@@ -144,16 +286,4 @@ body{
 
 #shopMerchandise{
     background-image: url("../media/title_background/official_store_2.jpeg");
-}
-
-.button-underground{
-    color: #000;
-}
-
-.button-underground::after{
-    background-color: #000;
-}
-
-.title .product:nth-child(3n+1){
-    width: 30vw;
 }

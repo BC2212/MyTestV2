@@ -1,0 +1,40 @@
+@media screen and (max-width: 500px){
+    /* Mobile phones */
+
+    [class|="button"]{
+        /* bottom: -50%; */
+        top: 30vh;
+    }
+
+    .header{
+        /* min-height: calc(100vh/3); */
+        min-height: 25vh;
+        height: 100%;
+    }
+
+    .title{
+        display: block;
+    }
+
+    .title .right-title, .title .left-title{
+        max-width: 100vw;
+        min-height: calc(75vh/2);
+        width: 100%;
+        height: 100%;
+    }
+
+    video{
+        height: calc(75vh/2);
+    }
+
+    [class|="product"]{
+        width: 100vw;
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .footer .menu ul{
+        justify-content: center;
+    }
+}

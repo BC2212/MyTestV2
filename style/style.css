@@ -10,6 +10,19 @@ body{
     box-sizing: content-box;
 }
 
+::-webkit-scrollbar{
+    width: 1vw;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #99A3A4;
+    border-radius: 5px;
+}
+
 [class|="button"]{
     padding: 8px 24px;
     font-size: 18px;
@@ -208,7 +221,11 @@ ul li{
     position: relative;
 }
 
-.footer .logo img{
+.footer .logoWrapper{
+    position: relative;
+}
+
+.footer .logoWrapper .logo img{
     position: relative;
     margin-top: 5%;
     margin-left: 4vw;
@@ -232,6 +249,7 @@ ul li{
 .footer .menu ul li{
     margin-left: 3vw;
     font-size: 18px;
+    line-height: 40px;
 }
 
 .footer form{
@@ -246,7 +264,6 @@ ul li{
 
 .footer form label{
     width: 300px;
-    margin-top: 10px;
 }
 
 .footer form input{
@@ -257,8 +274,8 @@ ul li{
     border-right: none;
     border-color: #8a8a8a;
     border-bottom-width: 1px;
-    padding: 10px 0;
-    margin-left: 20px;
+    padding:0 0 5px 0;
+    margin-left: 5px;
     font-size: 18px;
     color: #8a8a8a;
     outline: none;

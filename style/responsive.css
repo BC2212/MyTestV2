@@ -1,39 +1,10 @@
-@media screen and (max-width: 500px){
-    /* Mobile phones */
-
-    [class|="button"]{
-        /* bottom: -50%; */
-        top: 30vh;
-    }
-
-    .header{
-        /* min-height: calc(100vh/3); */
-        min-height: 25vh;
-        height: 100%;
-    }
-
-    .title{
-        display: block;
-    }
-
-    .title .right-title, .title .left-title{
-        max-width: 100vw;
-        min-height: calc(75vh/2);
-        width: 100%;
-        height: 100%;
-    }
-
-    video{
-        height: calc(75vh/2);
-    }
-
-    [class|="product"]{
-        width: 100vw;
-        height: 60vh;
-    }
-}
-
 @media screen and (max-width: 1200px){
+    [class|="product"]{
+        width: calc(100%/3);
+        min-height: 70vh;
+        height: 100%;
+    }
+
     .button-purchase{
         padding: 8px 20px
     }
@@ -82,5 +53,80 @@
     .footer .copyright{
         top: 85vh;
         right: initial;
+    }
+
+    .footer form{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    [class|="button"]{
+        top: 80vh;
+    }
+
+    .button-purchase{
+        top: -2vh;
+    }
+
+    .title{
+        display: block;
+    }
+
+    .title .left-title, .title .right-title{
+        max-width: 100vw;
+        min-height: 100vh;
+        width: 100%;
+        height: 100%;
+    }
+
+    video{
+        height: 80vh;
+    }
+
+    [class|="product"]{
+        max-width: 100vw;
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    /* Mobile phones */
+
+    [class|="button"]{
+        top: 28vh;
+    }
+
+    .header{
+        max-width: 100vw;
+        min-height: 30vh;
+        width: 100%;
+        height: 100%;
+    }
+
+    .title{
+        min-height: calc(70vh/2);
+        height: 100%;
+    }
+
+    .title .left-title, .title .right-title{
+        min-height: calc(70vh/2);
+        height: 100%;
+    }
+
+    video{
+        height: calc(75vh/2);
+    }
+
+    [class|="product"]{
+        max-width: 100vw;
+        min-height: 30vh;
+        width: 100%;
+        height: 100%;
     }
 }

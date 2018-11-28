@@ -298,6 +298,8 @@ ul li{
 
 .footer .social ul{
     display: inline-flex;
+    flex-flow: wrap;
+    justify-content: center;
     position: absolute;
     top: 50%;
     right: 4vw;
@@ -335,10 +337,12 @@ ul li{
     top: 40%;
     right: 3vw;
     float: right;
-    display: inline;
+    display: inline-flex;
     font-size: 12px;
     font-weight: 500;
     color: #8a8a8a;
+    flex-flow: wrap;
+    justify-content: center;
 }
 
 .footer .copyright a {

@@ -8,6 +8,7 @@
 body{
     overflow-x: scroll;
     box-sizing: content-box;
+    font-size: 18px;
 }
 
 ::-webkit-scrollbar{
@@ -25,7 +26,7 @@ body{
 
 [class|="button"]{
     padding: 8px 24px;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 500;
     position: relative;
     top: 85%;
@@ -248,14 +249,14 @@ ul li{
 
 .footer .menu ul li{
     margin-left: 3vw;
-    font-size: 18px;
+    font-size: 1em;
     line-height: 40px;
 }
 
 .footer form{
     color: #fff;
     width: 550px;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 500;
     display: inline-flex;
     top: 40px;
@@ -276,7 +277,7 @@ ul li{
     border-bottom-width: 1px;
     padding:0 0 5px 0;
     margin-left: 5px;
-    font-size: 18px;
+    font-size: 1em;
     color: #8a8a8a;
     outline: none;
 }
@@ -325,7 +326,7 @@ ul li{
   padding: 2px 5px;
   border-radius: 5px;
   border: #990000 solid 1px;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .tooltip-bottom:hover .tooltip-content {
@@ -338,7 +339,7 @@ ul li{
     right: 3vw;
     float: right;
     display: inline-flex;
-    font-size: 12px;
+    font-size: 1em;
     font-weight: 500;
     color: #8a8a8a;
     flex-flow: wrap;

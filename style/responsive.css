@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 1000px){
     body{
-        font-size: 18px;
+        font-size: 14px;
     }
 
     [class|="button"]{
@@ -101,7 +101,7 @@
 
 @media screen and (max-width: 500px){
     body{
-        font-size: 14px;
+        font-size: 10px;
     }
 
     [class|="button"]{

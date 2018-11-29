@@ -64,6 +64,10 @@
 
 
 @media screen and (max-width: 1000px){
+    body{
+        font-size: 18px;
+    }
+
     [class|="button"]{
         top: 80vh;
     }
@@ -96,7 +100,9 @@
 }
 
 @media screen and (max-width: 500px){
-    /* Mobile phones */
+    body{
+        font-size: 14px;
+    }
 
     [class|="button"]{
         top: 28vh;

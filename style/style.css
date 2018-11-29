@@ -339,7 +339,7 @@ ul li{
     right: 3vw;
     float: right;
     display: inline-flex;
-    font-size: 1em;
+    font-size: 0.6em;
     font-weight: 500;
     color: #8a8a8a;
     flex-flow: wrap;
@@ -350,7 +350,6 @@ ul li{
   vertical-align: baseline;
   text-decoration: none;
   color: #8a8a8a;
-  font-size: 0.6em;
 }
 
 .footer .stagebloc:hover {

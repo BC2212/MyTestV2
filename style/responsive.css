@@ -1,12 +1,17 @@
 @media screen and (max-width: 1200px){
     [class|="product"]{
         width: calc(100%/3);
-        min-height: 70vh;
+        min-height: 40vh;
         height: 100%;
     }
 
+    [class|="product"] a:not(.button-purchase){
+        margin-top: 1vh;
+    }
+
     .button-purchase{
-        padding: 8px 20px
+        top: -2vh;
+        padding: 8px 20px;
     }
 
     .footer{
@@ -15,7 +20,6 @@
 
     .footer .logoWrapper{
         top: 10vh;
-        padding-bottom: 20vh;
     }
 
     .footer .logoWrapper .logo{
@@ -33,7 +37,6 @@
     .footer .menu{
         top: 40vh;
     }
-
 
     .footer .menu, .footer .social ul, .footer .copyright{
         position: absolute;
@@ -97,6 +100,12 @@
         min-height: 100vh;
         height: 100%;
     }
+
+    .footer form{
+        width: 100%;
+        flex-flow: wrap;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -140,11 +149,23 @@
         margin-top: 1vh;
     }
 
-    [class|="product"] a{
+    [class|="product"] a:not(.button-purchase){
         margin-top: 1vh;
     }
 
     .button-purchase{
-        top: -1vh;
+        top: -2vh;
+    }
+
+    .footer .social ul{
+        top: 70vh;
+    }
+
+    .footer .social ul li{
+        margin: 1vh 0 0 5vw;
+    }
+
+    .footer .copyright{
+        top: 90vh;
     }
 }

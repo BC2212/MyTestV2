@@ -1,4 +1,9 @@
 @media screen and (max-width: 1200px){
+    .title .left-title, .title .right-title{
+        min-height: 50vh;
+        height: 100%;
+    }
+
     [class|="product"]{
         width: calc(100%/3);
         min-height: 40vh;
@@ -67,10 +72,6 @@
 
 
 @media screen and (max-width: 1000px){
-    body{
-        font-size: 14px;
-    }
-
     [class|="button"]{
         top: 80vh;
     }
@@ -99,6 +100,10 @@
         width: 100%;
         min-height: 100vh;
         height: 100%;
+    }
+
+    .footer{
+        height: 100vh;
     }
 
     .footer form{

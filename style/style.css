@@ -6,9 +6,11 @@
 }
 
 body{
-    overflow-x: scroll;
-    box-sizing: content-box;
+    overflow: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
     font-size: 18px;
+    background-color: #000;
 }
 
 ::-webkit-scrollbar{
@@ -354,6 +356,11 @@ ul li{
 
 .footer .stagebloc:hover {
   color: #4db8ff;
+}
+
+.footer, .title{
+    opacity: 0;
+    transition: opacity 2s ease-in;
 }
 
 /* --------------------------------------- */

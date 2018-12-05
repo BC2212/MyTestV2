@@ -11,17 +11,17 @@
     <title>Linkin Park</title>
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <img src="media/background/2017_0725_10272_6635.jpeg">
         <img src="media/background/2017_0731_10272_6685.png">
         <img src="media/background/2017_0726_10272_6654.png">
         <img src="media/background/2017_0725_10272_6636.png">
         <img src="media/background/2017_0725_10272_6649.png">
-        <a href="#">
+        <a href="#" id="LPLogo">
             <img src="media/logo/logo.png">
         </a>
 
-        <div class="openMenu">
+        <div class="openMenu" id="navIcon">
             <span class="line-1"></span>
             <span class="line-2"></span>
             <span class="line-3"></span>
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="footer">
         <div class="logoWrapper">
             <div class="logo">
                 <img src="media/logo/logo.png" style="width: 70px; height: 80px;">
@@ -209,5 +209,36 @@
             <a href="#" class="stagebloc">Fullsreen Direct</a>
         </p>
     </div>
+
+    <script>
+        var totalHeight=document.getElementById("header").offsetHeight;
+        var target=document.getElementsByClassName("title");
+        var i=0;
+        var windowHeight=window.innerHeight;
+        var documentHeight=document.body.offsetHeight;
+        var footerHeight=document.getElementById("footer").offsetHeight
+
+        window.onscroll=function(){onScrollEvent()}
+
+        function onScrollEvent(){
+            var scrollTop=window.scrollY;
+
+            if (scrollTop >= documentHeight - windowHeight){
+                document.getElementById("footer").style.opacity="1";
+                document.getElementById("LPLogo").style.display="none";
+                document.getElementById("navIcon").style.display="none";
+            }
+            else {
+                document.getElementById("LPLogo").style.display="block";
+                document.getElementById("navIcon").style.display="block";
+            }
+
+            if (scrollTop - 100 > totalHeight - windowHeight && i < 4){
+                target[i].style.opacity="1";
+                totalHeight+=target[i].offsetHeight;
+                i++;
+            }
+        }
+    </script>
 </body>
 </html>

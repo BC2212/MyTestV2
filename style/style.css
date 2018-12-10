@@ -191,124 +191,124 @@ ul li{
 }
 
 .closeButton .line{
-  width: 26px;
-  height: 2px;
-  background-color: #fff;
-  position: absolute;
-  display: block;
+    width: 26px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    display: block;
 }
 
 .closeButton .line1{
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .closeButton .line2{
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .closeButton:hover{
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .closeButton:hover .line1{
-  animation: closeButtonL 0.5s;
+    animation: closeButtonL 0.5s;
 }
 
 .closeButton:hover .line2{
-  animation: closeButtonR 0.5s;
+    animation: closeButtonR 0.5s;
 }
 
 .heart, .closeButton{
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 .heart{
-  display: block;
-  top: 10px;
-  right: 17px;
-  position: absolute;
-  width: 86px;
-  height: 86px;
+    display: block;
+    top: 10px;
+    right: 17px;
+    position: absolute;
+    width: 86px;
+    height: 86px;
 }
 
 .menuList{
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 25px;
-  margin-left: 50px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 25px;
+    margin-left: 50px;
 }
 
 .menuList a{
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 .menuList a:hover{
-  color: #bfbfbf;
+    color: #bfbfbf;
 }
 
 .menuChild:hover .subMenu{
-  display: block;
+    display: block;
 }
 
 .subMenu{
-  display: none;
-  transition: margin-right 0.5s ease-in-out;
+    display: none;
+    transition: margin-right 0.5s ease-in-out;
 }
 
 .subMenu li{
-  margin: 15px 0 15px 40px;
+    margin: 15px 0 15px 40px;
 }
 
 .emailsubscribe{
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 95px 0 0 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 95px 0 0 50px;
 }
 
 .emailsubscribe input{
-  width: 250px;
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom-width: 1px;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #8a8a8a;
-  outline: none;
+    width: 250px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 1px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #8a8a8a;
+    outline: none;
 }
 
 .emailsubscribe .submitButton{
-  background: url("../media/button/submit_arrow.png") no-repeat center center/42px auto;
-  margin: -30px 0 0 250px;
-  border: none;
-  width: 42px;
-  height: 28px;
-  display: block;
-  outline: none;
+    background: url("../media/button/submit_arrow.png") no-repeat center center/42px auto;
+    margin: -30px 0 0 250px;
+    border: none;
+    width: 42px;
+    height: 28px;
+    display: block;
+    outline: none;
 }
 
 table{
-  width: 100%;
-  margin: 40px  40px 60px 40px;
+    width: 100%;
+    margin: 40px  40px 60px 40px;
 }
 
 table td{
-  padding: 10px 20px;
+    padding: 10px 20px;
 }
 
 table a{
-  font-size: 26px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
 }
 
 table img{
-  width: 26px;
-  height: 26px;
+    width: 26px;
+    height: 26px;
 }
 
 .title{
@@ -557,9 +557,9 @@ table img{
 }
 
 .copyright a{
-  vertical-align: baseline;
-  text-decoration: none;
-  color: #8a8a8a;
+    vertical-align: baseline;
+    text-decoration: none;
+    color: #8a8a8a;
 }
 
 .menu a:hover, .social a:hover, .copyright a:hover:not(.stagebloc){
@@ -567,7 +567,7 @@ table img{
 }
 
 .stagebloc:hover{
-  color: #4db8ff;
+    color: #4db8ff;
 }
 
 .footer, .title{

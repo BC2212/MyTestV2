@@ -11,17 +11,137 @@
     <title>Linkin Park</title>
 </head>
 <body>
+    <div class="navPane" style="background-color: rgba(0,0,0,0.8); opacity: 1;"></div>
+    <div class="navPane" id="menuTab"> 
+        <button class="closeButton" onclick="closeMenuTab()">           
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+        </button>
+
+        <span>
+            <img class="heart heart-img" src="media/heart.png">            
+            <img class="heart heart-gif" src="media/heart.gif">
+        </span>
+
+        <ul>
+            <li class="menuList"><a href="">NEWS</a></li>
+            <li class="menuList"><a href="">EVENTS</a></li>
+            <li class="menuList"><a href="" class="menuChild" onmouseover="listAppear()">MEDIA</a>
+                <ul class="subMenu" id="listSubMenu" onmouseleave="listDisappear()">
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">DISCOGRAPHY</a></li>
+                    <li><a href="#">VIDEOS</a></li>
+                </ul>   
+            </li>            
+            <li class="menuList"><a href="">LPU</a></li>
+            <li class="menuList"><a href="">SHOP</a></li>
+            <li class="menuList"><a href="">LOGIN/REGISTER</a></li>
+            <form class="emailsubscribe" id="subscribe">
+                <label for="email">SUBSCRIBE TO LP NEWSLETTER</label>
+                <br>
+                <input type="text" name="email" id="email" placeholder="EMAIL ADDRESS">
+                <button type="submit" class="submitButton" id="submit-button"></button>
+            </form>
+        </ul>
+
+        <table>
+            <tr>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/instagram.svg">
+                    </a>
+                    <span class="tooltip-content">Instagram</span>
+                </td>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/facebook.svg">
+                    </a>
+                    <span class="tooltip-content">Facebook</span>
+                </td>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/twitter.svg">
+                    </a>
+                    <span class="tooltip-content">Twitter</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/snapchat.svg">
+                    </a>
+                    <span class="tooltip-content">Snapchat</span>
+                </td>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/line.svg">
+                    </a>
+                    <span class="tooltip-content">Line</span>
+                </td>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/google_plus.svg">
+                    </a>
+                    <span class="tooltip-content">Google+</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="tooltip-bottom" style="padding-right: 7px;">
+                    <a href="#">MS</a>
+                </td>
+                <td class="tooltip-bottom" style="padding-right: 14px;">
+                    <a href="#">JH</a>
+                </td>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img class=".copyright" src="media/social_icon/youtube.svg">
+                    </a>
+                    <span class="tooltip-content">Youtube</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/shazam.svg">
+                    </a>
+                    <span class="tooltip-content">Shazam</span>
+                </td>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/tumblr.svg">
+                    </a>
+                    <span class="tooltip-content">Tumblr</span>
+                </td>
+                <td class="tooltip-bottom">
+                    <a href="#">
+                        <img src="media/social_icon/newsletter.svg">
+                    </a>
+                    <span class="tooltip-content">Newsletter</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="tooltip-bottom" colspan="3">
+                    <a href="#">
+                        <img src="media/social_icon/music_for_relief.png" style="width: 160px; height: 35px;">
+                    </a>
+                    <span class="tooltip-content">Music for Relief</span>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
     <div class="header" id="header">
         <img src="media/background/2017_0725_10272_6635.jpeg">
         <img src="media/background/2017_0731_10272_6685.png">
         <img src="media/background/2017_0726_10272_6654.png">
         <img src="media/background/2017_0725_10272_6636.png">
         <img src="media/background/2017_0725_10272_6649.png">
-        <a href="#" id="LPLogo">
+        <a href="#" class="LPLogo" id="LPLogo">
             <img src="media/logo/logo.png">
         </a>
 
-        <div class="openMenu" id="navIcon">
+        <div class="openMenu" id="navIcon" onclick="openMenuTab()">
             <span class="line-1"></span>
             <span class="line-2"></span>
             <span class="line-3"></span>
@@ -202,11 +322,21 @@
         </div>
         
         <p class="copyright">
-            <a href="#">Privacy Policy</a>
-            •
-            <a href="#">Terms of Use</a>
-            • © 2018 Linkin Park. Built on 
-            <a href="#" class="stagebloc">Fullsreen Direct</a>
+            <span>
+                <a href="#">Privacy Policy</a>
+            </span>
+            <span>
+                •
+            </span>
+            <span>
+                <a href="#">Terms of Use</a>
+            </span>
+            <span>
+                • © 2018 Linkin Park. Built on 
+            </span>
+            <span>
+                <a href="#" class="stagebloc">Fullsreen Direct</a>
+            </span>
         </p>
     </div>
 
@@ -238,6 +368,42 @@
                 totalHeight+=target[i].offsetHeight;
                 i++;
             }
+        }
+
+        function openMenuTab(){
+            var tab=document.getElementsByClassName("navPane");
+            for (var i=0; i<=1; i++){
+                tab[i].style.opacity="1"; 
+                tab[i].style.width="380px";
+            }
+            document.getElementById("navIcon").style.display="none";      
+            document.getElementById("LPLogo").style.display="none";
+            document.body.style.overflow="hidden";
+            var attribute=document.createAttribute("class");
+            attribute.value="active";
+            document.body.setAttributeNode(attribute);
+        }
+
+        function closeMenuTab(){
+            var tab=document.getElementsByClassName("navPane");
+            document.getElementById("navIcon").style.display="block";
+            document.getElementById("listSubMenu").style.display="none";                   
+            for (var i=0; i<=1; i++){
+                tab[i].style.width="0";
+                tab[i].style.opacity="0";
+            }
+            document.getElementById("LPLogo").style.display="block";
+            document.body.style.overflowY="scroll";
+            document.body.removeAttribute("class");
+        }
+
+        function listAppear(){
+            document.getElementById("listSubMenu").style.display="block";
+            document.getElementById("listSubMenu").style.animation="subMenuAppear 0.5s";    
+        }
+
+        function listDisappear(){    
+            document.getElementById("listSubMenu").style.display="none";        
         }
     </script>
 </body>

@@ -50,3 +50,75 @@
         opacity: 1;
     }
 }
+
+/* When mouse over close menu button */
+
+@keyframes closeButtonL{
+    0%{
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    15%{
+        margin-left: -20px;
+        opacity: 0.3;
+    }
+
+    100%{
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes closeButtonR{
+    0%{
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    15%{
+        margin-left: 20px;
+        opacity: 0.7;
+    }
+
+    100%{
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes subMenuAppear{
+    0%{
+        margin-left: 20px;
+        opacity: 0.3;
+    }
+
+    90%{
+        margin-left: 35px;
+        opacity: 0.7;
+    }
+
+    100%{
+        margin-left: 40px;
+        opacity: 1;
+    }
+}
+
+/* When mouse over media option in menu */
+
+@keyframes subMenuDisappear{
+    0%{
+        margin-left: 40px;
+        opacity: 1;
+    }
+
+    10%{
+        margin-left: 35px;
+        opacity: 0.7;
+    }
+
+    100%{
+        margin-left: 20px;
+        opacity: 0;
+    }
+}

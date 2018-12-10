@@ -11,7 +11,19 @@
     <title>Linkin Park</title>
 </head>
 <body>
+    <script>
+        window.onload=function(){windowOnLoad()}
+
+        function windowOnLoad(){
+            document.getElementById("LPLogo").style.opacity="1";
+            document.getElementById("LPLogo").style.top="10vh";
+            document.getElementById("navIcon").style.opacity="1";
+            document.getElementById("navIcon").style.top="15vh";
+        }
+    </script>
+
     <div class="navPane" style="background-color: rgba(0,0,0,0.8); opacity: 1;"></div>
+
     <div class="navPane" id="menuTab"> 
         <button class="closeButton" onclick="closeMenuTab()">           
             <span class="line line1"></span>
@@ -19,14 +31,13 @@
         </button>
 
         <span>
-            <img class="heart heart-img" src="media/heart.png">            
-            <img class="heart heart-gif" src="media/heart.gif">
+            <img class="heart" src="media/heart.gif">
         </span>
 
         <ul>
             <li class="menuList"><a href="">NEWS</a></li>
             <li class="menuList"><a href="">EVENTS</a></li>
-            <li class="menuList"><a href="" class="menuChild" onmouseover="listAppear()">MEDIA</a>
+            <li class="menuList"><div class="menuChild" onmouseover="listAppear()">MEDIA</div>
                 <ul class="subMenu" id="listSubMenu" onmouseleave="listDisappear()">
                     <li><a href="#">PHOTOS</a></li>
                     <li><a href="#">DISCOGRAPHY</a></li>
@@ -131,14 +142,15 @@
             </tr>
         </table>
     </div>
+
     <div class="header" id="header">
         <img src="media/background/2017_0725_10272_6635.jpeg">
         <img src="media/background/2017_0731_10272_6685.png">
         <img src="media/background/2017_0726_10272_6654.png">
         <img src="media/background/2017_0725_10272_6636.png">
         <img src="media/background/2017_0725_10272_6649.png">
-        <a href="#" class="LPLogo" id="LPLogo">
-            <img src="media/logo/logo.png">
+        <a href="#" class="LPLogo">
+            <img id="LPLogo" src="media/logo/logo.png">
         </a>
 
         <div class="openMenu" id="navIcon" onclick="openMenuTab()">
@@ -160,7 +172,12 @@
 
     <div class="title">
         <div class="video">
-            <video src="media/video/Battle Symphony (Official Lyric Video) - Linkin Park.mp4" controls></video>
+            <div class="videoControl" id="playVideo">
+                <h2>WATCH THE MUSIC VIDEO</h2>
+                <button class="playButton" onclick="playVideo()"></button>
+            </div>
+
+            <video id="BattleSymphony" src="media/video/Battle Symphony (Official Lyric Video) - Linkin Park.mp4" controls></video>
         </div>
     </div>
 
@@ -345,29 +362,38 @@
         var target=document.getElementsByClassName("title");
         var i=0;
         var windowHeight=window.innerHeight;
+        var windowWidth=window.innerWidth;
         var documentHeight=document.body.offsetHeight;
         var footerHeight=document.getElementById("footer").offsetHeight
 
-        window.onscroll=function(){onScrollEvent()}
+        if (windowWidth >= 500){
 
-        function onScrollEvent(){
-            var scrollTop=window.scrollY;
+            window.onscroll=function(){onScrollEvent()}
 
-            if (scrollTop >= documentHeight - windowHeight){
-                document.getElementById("footer").style.opacity="1";
-                document.getElementById("LPLogo").style.display="none";
-                document.getElementById("navIcon").style.display="none";
-            }
-            else {
-                document.getElementById("LPLogo").style.display="block";
-                document.getElementById("navIcon").style.display="block";
-            }
+            function onScrollEvent(){
+                var scrollTop=window.scrollY;
 
-            if (scrollTop - 100 > totalHeight - windowHeight && i < 4){
-                target[i].style.opacity="1";
-                totalHeight+=target[i].offsetHeight;
-                i++;
+                if (scrollTop >= documentHeight - windowHeight){
+                    document.getElementById("footer").style.opacity="1";
+                    document.getElementById("LPLogo").style.display="none";
+                    document.getElementById("navIcon").style.display="none";
+                }
+                else {
+                    document.getElementById("LPLogo").style.display="block";
+                    document.getElementById("navIcon").style.display="block";
+                }
+
+                if (scrollTop - 100 > totalHeight - windowHeight && i < 4){
+                    target[i].style.opacity="1";
+                    totalHeight+=target[i].offsetHeight;
+                    i++;
+                }
             }
+        }
+        else {                                                      
+            for (var i=0; i<=3; i++)                                //  
+                target[i].style.opacity="1";                        //  Display all
+            document.getElementById("footer").style.opacity="1";    //
         }
 
         function openMenuTab(){
@@ -404,6 +430,12 @@
 
         function listDisappear(){    
             document.getElementById("listSubMenu").style.display="none";        
+        }
+
+        function playVideo(){
+            document.getElementById("BattleSymphony").play();
+            document.getElementById("BattleSymphony").style.opacity="1";
+            document.getElementById("playVideo").style.display="none";
         }
     </script>
 </body>

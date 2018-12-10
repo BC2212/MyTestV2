@@ -3,6 +3,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -35,7 +36,9 @@ body.active>:not(.navPane){
     padding: 8px 24px;
     font-size: 1em;
     font-weight: 500;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
     top: 85%;
     background: none;
     border: 2px solid;
@@ -68,8 +71,11 @@ body.active>:not(.navPane){
 }
 
 video{
+    max-width: 100vw;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    opacity: 0;
+    background-color: #000;
 }
 
 a{
@@ -104,7 +110,6 @@ ul li{
     height: 96px;
     position: fixed;
     z-index: 1;
-    top: 10vh;
     left: 5vw;
 }
 
@@ -112,13 +117,19 @@ ul li{
     animation: logo 1s ease-in;
 }
 
+#LPLogo, .openMenu{
+    opacity: 0;
+    top: 0;
+    transition: all 0.25s;
+}
+
 .openMenu{
     position: fixed;
     z-index: 1;
     width: 32px;
     height: 16px;
-    top: 114px;
     right: 5vw;
+    opacity: 0;
 }
 
 [class|="line"]{
@@ -207,16 +218,8 @@ ul li{
   animation: closeButtonR 0.5s;
 }
 
- .heart, .closeButton{
+.heart, .closeButton{
   margin-bottom: 100px;
-}
-
-.heart:hover .heart-img{
-  opacity: 0;
-}
-
-.heart:hover .heart-gif{
-  opacity: 1;
 }
 
 .heart{
@@ -226,14 +229,6 @@ ul li{
   position: absolute;
   width: 86px;
   height: 86px;
-}
-
-.heart-img{
-  display: block;
-}
-
-.heart-gif{
-  opacity: 0;
 }
 
 .menuList{
@@ -329,6 +324,9 @@ table img{
     width: 50vw;
     height: 90vh;
     background-size: 100% 100%;
+    position: relative;
+    left: 0;
+    top: 0;
     z-index: 0;
 }
 
@@ -340,9 +338,47 @@ table img{
     background-color: #000;
 }
 
+.video{
+    background-image: url("../media/title_background/video_background.jpeg");
+    background-size: 100% 100%;
+}
+  
+.video h2{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 350;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+  
+.video button{
+    width: 10vw;
+    height: 10vw;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 1;
+}
+  
+.video .playButton{
+    background-image: url("../media/button/play.png");
+    background-size: cover;
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    outline: none;
+}
+
 [class|="product"]{
     width: calc(100vw/3);
     height: 80vh;
+    position: relative;
 }
 
 [class|="product"] img{
@@ -351,7 +387,7 @@ table img{
     margin-top: 10%;
 }
 
-[class|="product"] a{
+[class|="product"] a:not(.button-purchase){
     color: #000;
     margin-top: 30px;
     display: inline-block;
@@ -372,10 +408,12 @@ table img{
 
 .button-purchase{
     padding: 8px 100px;
+    color: #000;
 }
 
 .button-purchase:hover{
     text-decoration: none!important;
+    border: none;
 }
 
 .button-purchase::after{
@@ -424,7 +462,6 @@ table img{
 
 .footer form{
     color: #fff;
-    width: 550px;
     font-size: 1em;
     font-weight: 500;
     display: flex;
@@ -478,12 +515,12 @@ table img{
     margin-left: 3vw;
 }
 
-.tooltip-bottom {
+.tooltip-bottom{
     position: relative;
     display: inline-block;
 }
   
-.tooltip-content {
+.tooltip-content{
     position: absolute;
     margin: 5px 0 0 0;
     width: auto;
@@ -528,6 +565,7 @@ table img{
 .menu a:hover, .social a:hover, .copyright a:hover:not(.stagebloc){
     color:  #616A6B;
 }
+
 .stagebloc:hover{
   color: #4db8ff;
 }

@@ -262,7 +262,7 @@ ul li{
 
 .emailsubscribe{
     color: #fff;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
     margin: 95px 0 0 50px;
 }
@@ -275,7 +275,7 @@ ul li{
     border-right: none;
     border-bottom-width: 1px;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 1em;
     color: #8a8a8a;
     outline: none;
 }
@@ -300,7 +300,7 @@ table td{
 }
 
 table a{
-    font-size: 26px;
+    font-size: 1.2em;
     font-weight: 500;
     text-decoration: none;
     color: #fff;
